@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Apl means methode 
+        //Basically, promise is an object in JS having some properties and methods
+         //Promises => is nothing but it is an  "eventual" completion of task
+        //in short promises returns the status of task completion..whether it is pending or fullfilled or rejected
+      //and these 3(pending ,fullfilled , rejected) are the properties of an object promise
+
+
+        //Creating promise object which returns 3 values/states pending,fulllfilled,reject
+
+       /* let promise=new Promise((resolve,reject)=>{
+            console.log("Creating primises.....");
+                                  //pending
+           // resolve("success");//fullfilled
+             reject("some error...")//reject
+        });*/       //api function-
+        function getNum(id)
+        {
+          return new Promise((resolve,reject)=> {
+           setTimeout(()=>{
+            console.log("number : ",id);
+            resolve("Success");
+            //reject("failure");
+           }, 6000)
+        });   
+    }
+
+       
+    </script>
+</body>
+</html>

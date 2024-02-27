@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //synchronous =>in syn case,all the tasks will get execute at the same time
+         //asynchronous =>in asyn case,all the tasks will get execute one after another 
+    
+
+           //synchronous js => all of the below 3 statements will get execute at the same time
+            // console.log("one");
+            // console.log("two");
+            // console.log("three");
+
+         //Asynchronous js   
+        console.log("one");
+        function f1(){
+            console.log("two");      
+        }
+
+        //setTimeout()  function can be be pass as a callback function to another userdefined function. setTimeout() function is used to configured asynchronous javascript in the code. using setTimeout() function we can execution time of given task
+
+         //calling f1() function and at a time of calling this function we are passing setTimeout() as a callback(the function which is passed as an argument to another function is called as callback function)
+
+    //     f1(setTimeout(()=>{
+    //         console.log("inside asynchronous");
+    //     },5000)
+    //   );
+    //   console.log("four");
+    //   console.log("Five");
+
+    f1(setTimeout(()=>{
+        let n=90;
+           if(n%2==0)
+           {
+            console.log("even number after 5sec");
+           }
+           else
+           {
+            console.log("odd number after 5 sec");
+           }
+        },5000)
+      );
+      console.log("four");
+      console.log("Five");
+
+
+
+    </script>
+</body>
+</html>

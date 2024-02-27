@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+      // .then() and .catch() are the 2 methods of promise object..
+     //these both methods will get execute when api returns the promise
+     function getNum(id)
+        {
+          return new Promise((resolve,reject)=> {
+           setTimeout(()=>{
+            console.log("number : ",id);
+            resolve("Success");
+            // reject("failure");
+           }, 6000)
+        });
+    } //function  close
+    //the below   .then()  method will get execute when api getNum()  returns resolve as a promise
+
+    //and .catch()  will get execute when api getNum()  returns reject as a promise
+         let p=getNum(8);//resolve
+         p.then((res)=>{
+            console.log("in then block");
+            console.log(res);
+         });
+
+         let p1=getNum(8);//reject
+         p1.catch((a)=>{
+            console.log("in catch block");
+            console.log(a);
+         });
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(a,b)
+        {
+            console.log("add = "+(a+b));
+        }
+
+        //here we are passing add function as a callback to the cal() function
+        
+        function cal(x,y,add)//function declaration
+        {
+            add(x,y);
+
+        }
+        cal(3,4,add); //function callling actual parameter
+    </script>
+</body>
+</html>

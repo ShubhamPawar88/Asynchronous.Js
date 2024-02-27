@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* function getNum(id)
+        {
+           setTimeout(()=>{
+            console.log("number : ",id)
+           }, 3000)
+        }
+        // //all of the below function will get call at the same time
+        getNum(1);
+        getNum(2);
+        getNum(3); */
+            
+        function getNum(id,getNextN)
+        {
+           setTimeout(()=>{
+            console.log("number : ",id);
+            if(getNextN)
+            {
+                getNextN();
+            }
+           }, 3000)
+        }
+
+        getNum(1 ,()=>{
+            getNum(2,()=>{
+                getNum(3);
+            });
+        });
+        //getNum(1);
+        // getNum(2);
+        // getNum(3);
+
+    </script>
+</body>
+</html>
